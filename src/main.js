@@ -7,7 +7,7 @@ import { getBounds, createProjection, renderMap } from './core/Projection.js'
 
 import { loadMapData } from './data/loadMapData.js';
 
-loadMapData('/data/lopatino.geojson').then(geojson => {
+loadMapData('data/lopatino.geojson').then(geojson => {
   console.log(geojson);
 
   // 1. Сначала считаем границы
