@@ -14,7 +14,7 @@
  */
 
 export async function loadMapData(url) {
-    const response = await fetch('/data/lopatino.geojson'); // ждём ответ сервера
+    const response = await fetch(url); // ждём ответ сервера
     const geojson = await response.json();                   // ждём, пока тело ответа распарсится в JSON
     return geojson;
 }
