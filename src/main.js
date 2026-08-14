@@ -12,7 +12,7 @@ canvas.height = window.innerHeight;
 
 // 2. Указываем чистый относительный путь БЕЗ слэша в начале и БЕЗ import.meta
 // Для Vite это означает: "в локалке бери из public/data, а в сети — из текущей папки сайта"
-loadMapData('data/lopatino.geojson').then(geojson => {
+loadMapData(import.meta.env.BASE_URL + 'data/lopatino.geojson').then(geojson => {
   console.log(geojson);
 
   const bounds = getBounds(geojson);
