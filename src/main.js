@@ -1,7 +1,7 @@
 import './style.css'
 import { getBounds, createProjection, renderMap } from './core/Projection.js'
 import { loadMapData } from './data/loadMapData.js';
-import lopatinoUrl from '../public/data/lopatino.geojson?url'; // 1. Импортировали путь
+import lopatinoUrl from './data/lopatino.geojson?url'; // 👈 Изменили путь на ./data/...
 
 // 2. Настраиваем холст
 document.querySelector('#app').innerHTML = `<canvas id="mapCanvas"></canvas>`;
