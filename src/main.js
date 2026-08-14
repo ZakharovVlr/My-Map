@@ -1,9 +1,8 @@
 import './style.css'
 import { getBounds, createProjection, renderMap } from './core/Projection.js'
 import { loadMapData } from './data/loadMapData.js';
-import lopatinoUrl from './data/lopatino.geojson?url'; // 👈 Изменили путь на ./data/...
 
-// 2. Настраиваем холст
+// 1. Сразу настраиваем холст
 document.querySelector('#app').innerHTML = `<canvas id="mapCanvas"></canvas>`;
 const canvas = document.getElementById('mapCanvas');
 const ctx = canvas.getContext('2d');
@@ -11,8 +10,9 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// 3. Запускаем загрузку по гарантированному пути
-loadMapData(lopatinoUrl).then(geojson => {
+// 2. Указываем чистый относительный путь БЕЗ слэша в начале и БЕЗ import.meta
+// Для Vite это означает: "в локалке бери из public/data, а в сети — из текущей папки сайта"
+loadMapData('data/lopatino.geojson').then(geojson => {
   console.log(geojson);
 
   const bounds = getBounds(geojson);
@@ -20,6 +20,7 @@ loadMapData(lopatinoUrl).then(geojson => {
 
   renderMap(geojson, project, ctx);
 });
+
 
 
 
