@@ -10,16 +10,8 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// 2. Указываем чистый относительный путь БЕЗ слэша в начале и БЕЗ import.meta
-// Для Vite это означает: "в локалке бери из public/data, а в сети — из текущей папки сайта"
-// Автоматически находим базовый путь (например, "/My-Map/") из адреса сайта
-const basePath = window.location.pathname.endsWith('/')
-  ? window.location.pathname
-  : window.location.pathname + '/';
-
-// Чистый относительный путь БЕЗ слэша в начале. 
-// Точка в начале (./) заставит браузер искать данные относительно ТЕКУЩЕЙ папки сайта!
-const finalUrl = basePath + 'data/lopatino.geojson';
+//!
+const finalUrl = import.meta.env.BASE_URL + 'data/lopatino.geojson';
 
 
 loadMapData(finalUrl).then(geojson => {
