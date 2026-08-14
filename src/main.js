@@ -17,8 +17,9 @@ const basePath = window.location.pathname.endsWith('/')
   ? window.location.pathname
   : window.location.pathname + '/';
 
-// Склеиваем идеальный путь к файлу данных
-const finalUrl = basePath + 'data/lopatino.geojson';
+// Чистый относительный путь БЕЗ слэша в начале. 
+// Точка в начале (./) заставит браузер искать данные относительно ТЕКУЩЕЙ папки сайта!
+const finalUrl = './data/lopatino.geojson';
 
 loadMapData(finalUrl).then(geojson => {
   console.log(geojson);
