@@ -16,47 +16,46 @@
   </head>
   <body>
     <div id="app"></div>
+      <!-- Подвал сайта -->
+      <footer class="site-footer">
+        <div class="footer-bottom">
+          <!-- Верхний блок: только текстовый копирайт -->
+          <div class="footer-copyright">
+            <span class="footer-logo">by <span class="logo-main-footer">Project-P1</span></span>
+            <span class="footer-author">&copy; 2026 My-Map</span>
+            <span class="footer-note">Разработано в учебных целях</span>
+          </div>
+      
+          <!-- Нижний блок: кнопка выбора языка с линией наверх -->
+          <div class="footer-lang-row">
+            <details class="lang-selector">
+              <summary class="lang-current">
+                <svg class="icon-globe" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+                <span>Русский</span>
+                <svg class="icon-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </summary>
+      
+              <ul class="lang-dropdown">
+                <li><a href="#" class="lang-link active">Русский</a></li>
+                <li><a href="#" class="lang-link">English (US)</a></li>
+                <li><a href="#" class="lang-link">Deutsch (Germany)</a></li>
+                <li><a href="#" class="lang-link">Français (France)</a></li>
+                <li><a href="#" class="lang-link">日本語 (Japan)</a></li>
+                <li><a href="#" class="lang-link">中文 (China)</a></li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
-
-  <!-- Подвал сайта -->
-  <footer class="site-footer">
-    <div class="footer-bottom">
-      <!-- Верхний блок: только текстовый копирайт -->
-      <div class="footer-copyright">
-        <span class="footer-logo">by <span class="logo-main-footer">Project-P1</span></span>
-        <span class="footer-author">&copy; 2026 My-Map</span>
-        <span class="footer-note">Разработано в учебных целях</span>
-      </div>
-  
-      <!-- Нижний блок: кнопка выбора языка с линией наверх -->
-      <div class="footer-lang-row">
-        <details class="lang-selector">
-          <summary class="lang-current">
-            <svg class="icon-globe" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-              </path>
-            </svg>
-            <span>Русский</span>
-            <svg class="icon-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </summary>
-  
-          <ul class="lang-dropdown">
-            <li><a href="#" class="lang-link active">Русский</a></li>
-            <li><a href="#" class="lang-link">English (US)</a></li>
-            <li><a href="#" class="lang-link">Deutsch (Germany)</a></li>
-            <li><a href="#" class="lang-link">Français (France)</a></li>
-            <li><a href="#" class="lang-link">日本語 (Japan)</a></li>
-            <li><a href="#" class="lang-link">中文 (China)</a></li>
-          </ul>
-        </details>
-      </div>
-    </div>
-  </footer>
 </html>
