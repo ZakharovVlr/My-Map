@@ -67,7 +67,7 @@ canvas.addEventListener('wheel', (event) => {
 
 canvas.addEventListener('mousedown', (event) => {
   isDragging = true;
-  // Запоминаем стартовую позицию курсора на экране
+  // Запоминаем стартовую позицию курсора на экране. 
   lastX = event.clientX;
   lastY = event.clientY;
 });
