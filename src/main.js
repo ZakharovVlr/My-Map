@@ -83,7 +83,7 @@ canvas.addEventListener('mousemove', (event) => {
   // Передаем эти дельты в метод нашей камеры
   camera.move(dx, dy);
 
-  // ОБЯЗАТЕЛЬНО обновляем прошлую позицию на текущую
+  // обновляем прошлую позицию на текущую
   lastX = event.clientX;
   lastY = event.clientY;
 
